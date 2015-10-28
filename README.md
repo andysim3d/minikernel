@@ -1,2 +1,2 @@
-# minikernal
-A sample of kernal 
+# minikernel
+A sample of kernel 
