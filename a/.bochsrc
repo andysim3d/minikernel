@@ -5,7 +5,7 @@ vgaromimage : file=/Users/Andy/opt/bochs/share/bochs/VGABIOS-lgpl-latest
 floppya: 1_44=/Users/Andy/minikernal/a.img, status=inserted
 boot: floppy
 
-log: bochsout.txt
+log: .bochsout.txt
 mouse: enabled=0
 #keyboard:  map=/Users/Andy/opt/bochs/share/bochs/keymaps/x11-pc-us.map
 

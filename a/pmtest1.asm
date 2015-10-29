@@ -53,7 +53,7 @@ LABEL_BEGIN:
 	;prepare change to pm 
 	mov eax, cr0
 	or eax, 1
-	mov cro, eax
+	mov cr0, eax
 
 	jmp dword SelectorCode32:0
 	;END of [SECTION .s16]
@@ -63,12 +63,11 @@ LABEL_BEGIN:
 LABEL_SEG_CODE32:
 	mov ax, SelectorVideo
 	mov gs, ax
-	mov edi, (80 * 11 + 79) *2
+	mov edi, (80 * 11 + 70) *2
 	mov ah, 0Ch
 	mov al, 'P'
 	mov [gs:edi], ax
 	;stop
 	jmp $
-SegCode32Len	equ $ - LABEL_SEG_CODE32
-	;END of [SECTION .s32]
 
+SegCode32Len	equ $ - LABEL_SEG_CODE32
