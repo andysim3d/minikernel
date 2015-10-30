@@ -33,7 +33,7 @@ LABEL_BEGIN:
 	mov word [LABEL_DESC_CODE32 + 2], ax
 	shr eax, 16
 	mov byte [LABEL_DESC_CODE32 + 4], al
-	mov byte [LABEL_DESC_CODE32 + 7], al
+	mov byte [LABEL_DESC_CODE32 + 7], ah
 
 	;prepare for GDTR load
 	xor eax, eax
@@ -63,7 +63,8 @@ LABEL_BEGIN:
 LABEL_SEG_CODE32:
 	mov ax, SelectorVideo
 	mov gs, ax
-	mov edi, (80 * 11 + 70) *2
+
+	mov edi, (80 * 11 + 79) *2
 	mov ah, 0Ch
 	mov al, 'P'
 	mov [gs:edi], ax

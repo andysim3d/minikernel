@@ -23,9 +23,9 @@ DA_CCOR	EQU	9Eh;
 ;Attr: dw (lower 4 bits of higher byte are always 0)
 %macro Descriptor 3
 	;base1
-	dw %1 & 0FFFFh
-	;Limit1
 	dw %2 & 0FFFFh
+	;Limit1
+	dw %1 & 0FFFFh
 	;Base 2
 	db (%1 >> 16) &0FFh
 	;Attr1 + Limit2 + Attr2
